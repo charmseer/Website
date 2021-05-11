@@ -1,11 +1,12 @@
-﻿ * {
+﻿* {
    outline: 1px solid red !important;
 }
 
 body {
   background-color: rgb(19, 21, 22);
-  margin-top: 10px;
+  
   color: rgb(195, 190, 182);
+  margin :5% 20% 0% 20%;
 }
 /* google fonts font specs */
 /*font-family: 'Roboto', sans-serif;*/
@@ -23,7 +24,7 @@ h4{
 }
 */
 
-div {
+.fullPage {
     padding-right:200px;
     padding-left:200px;
 }
@@ -32,6 +33,9 @@ div {
   padding-top: 50px;
   padding-bottom: 10px;
 }
+/*.sectorTop{
+  padding-top: 100px;
+} */
 }
 .title{
 	background-color: #33BEBE;
