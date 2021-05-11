@@ -1,14 +1,15 @@
-﻿/* * {
+﻿ * {
    outline: 1px solid red !important;
-} */
+}
 
 body {
   background-color: rgb(19, 21, 22);
   margin-top: 10px;
+  color: rgb(195, 190, 182);
 }
 /* google fonts font specs */
 /*font-family: 'Roboto', sans-serif;*/
-p{
+/*p{
     color: rgb(195, 190, 182);
 }
 h1{
@@ -19,6 +20,18 @@ h2{
 }
 h4{
     color: rgb(195, 190, 182);
+}
+*/
+
+div {
+    padding-right:200px;
+    padding-left:200px;
+}
+
+.sectorMid{
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
 }
 .title{
 	background-color: #33BEBE;
