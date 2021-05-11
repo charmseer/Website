@@ -11,11 +11,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1{
+    font-weight:100;
+}
+h4{
+    font-weight:100;
+}
+h5{
+    font-weight:300;
+}
 img{
     padding: 5%;
 }
 /* google fonts font specs */
-font-family: 'Roboto', sans-serif;
 
 .fullPage {
     padding-right:200px;
@@ -26,7 +34,13 @@ font-family: 'Roboto', sans-serif;
   padding-top: 50px;
   padding-bottom: 10px;
 }
- 
+.sectorBottom{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.sectorTop{
+    padding-left:5%;
+}
 }
 .title{
 	background-color: #33BEBE;
