@@ -3,7 +3,22 @@
 }
 
 body {
-  background-color: lightblue;
+  background-color: rgb(19, 21, 22);
+  margin-top: 10px;
+}
+/* google fonts font specs */
+/*font-family: 'Roboto', sans-serif;*/
+p{
+    color: rgb(195, 190, 182);
+}
+h1{
+    color: rgb(195, 190, 182);
+}
+h2{
+    color: rgb(195, 190, 182);
+}
+h4{
+    color: rgb(195, 190, 182);
 }
 .title{
 	background-color: #33BEBE;
@@ -13,6 +28,9 @@ body {
     display: flex;
 }
 
+.foot{ 
+    background-color: rgb(58,58,58);
+}
 .image{
 	max-width: 460px ;
 }
