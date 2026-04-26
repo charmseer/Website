@@ -1,86 +1,302 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width", intial-scale=1.0"">
-    <title>charmseer portfolio</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    <!--Includes FontAwesome Access --> 
-    <script src="https://kit.fontawesome.com/8c0ffced14.js" crossorigin="anonymous"></script>
-    <!-- Link to the Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
-
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Sreeram Hrithwik — Technical Product Manager & XR Creator. Building the spatial web with AR, VR, and immersive experiences."/>
+  <title>Sreeram Hrithwik — TPM & XR Creator</title>
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="container">
 
-        <div class="row" align ="center">
-            <div class="col-sm-10"> </div>
-            <div class="col-sm-2" align="right"> sreeram hrithwik </div>
-            <!-- <div class="col-md-10"> Nav Bar? </div> --> 
-        </div>
+  <div class="cursor" id="cursor"></div>
+  <canvas id="starfield"></canvas>
 
-        <div class="row sectorTop" align ="left">
-            <div class="col-md-12"><h1> Hi, there! </h1></div> 
-             <div class="col-md-12"><h5> I am a self-taught programmer.</h5> </div>
-            <div class="col-md-12"><h5> I try to build AR experiences using : </h5> </div>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">CHARMSEER</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="mode-label">Dark</span>
+          <div class="toggle" id="theme-toggle" role="button" aria-label="Toggle light/dark theme">
+            <div class="toggle-thumb"></div>
+          </div>
         </div>
+      </li>
+    </ul>
+    <button class="nav-mobile-btn" id="nav-mobile-btn" aria-label="Open menu">&#9776;</button>
+  </nav>
 
-        <div class="row" align ="center">
-            <div class="col-md-3"> Spark AR Studio <p><img src="images/sparkARLogo.png" id="rcorners2" class="img-responsive" alt="Facebook Spark AR Studio Logo" "></p> </div>
-            <div class="col-md-3"> Lens Studio <p><img src="images/lensStudioLogo.png" id="rcorners2" class="img-responsive" alt="Blender Logo" ></p></div>
-            <div class="col-md-3"> Unity <p><img src="images/unity.png" id="rcorners2" class="img-responsive" alt="Unity Logo" ></p></div>
-            <div class="col-md-3"> & Blender <p><img src="images/blenderLogo.png" class="img-responsive" alt="Blender Logo"></a></p> </div>   
-        </div>
-
-        <div class="row sectorMid" align ="center">
-            <div class"col-sm-12"> <h5>Click on the links below to checkout my work</h5><div>
-        </div>
-        <div class="row" align ="center">
-            <div class="col-md-3"> 
-                <p><a href="https://www.youtube.com/channel/UCFRmp2Rfzau80TyzDO3rfqA" style="color: rgb(195, 190, 182)"><i class="fab fa-youtube fa-5x"></i><br>Project Videos</a></p>
-            </div>
-            <div class="col-md-3">
-                <p><a href="https://charmseer.itch.io/" style="color: rgb(195,190,182)"><i class="fab fa-itch-io fa-5x"></i><br> Games</a></p>
-            </div>  
-            <div class="col-md-3">
-                <p><a href="https://lensstudio.snapchat.com/creator/Uowsef-6DfZKltK-mTEvPg" style="color: rgb(195, 190, 182)"><i class="fab fa-snapchat-ghost fa-5x"></i><br>Snapchat Lenses</a></p>
-            </div>
-              
-            <div class="col-md-3"> 
-                <p><a href="https://www.instagram.com/xrwithcharmseer/" style="color: rgb(195, 190, 182)"><i class="fab fa-instagram fa-5x"></i><br>Instagram Filters</a></p>
-            </div>
-        </div>
-        <div class="row sectorBottom" align ="center">
-            <div class="col-sm-12"><h3> To hire me for your projects please drop a mail to </h2> </div>
-            <div class="col-sm-12"><h4> charmseer@gmail.com</h4></div>
-        </div>
-        
-        <div class="row foot sectorBottom" align ="center">
-            <div class="col-md-2"><p><a href="https://www.youtube.com/channel/UCFRmp2Rfzau80TyzDO3rfqA" style="color:rgb(195,190,182)"><i class="fab fa-youtube-square fa-3x"></i></a></div>
-            <div class="col-sm-2"><p><a href="https://www.linkedin.com/in/sreeram-hrithwik/" style="color:rgb(195,190,182)"> <i class="fab fa-linkedin fa-3x" ></i></a></div>
-            <div class="col-sm-2"><p><a href="https://github.com/charmseer" style="color:rgb(195,190,182)"><i class="fab fa-github-square fa-3x"></i></a> </div>
-            <div class="col-sm-2"><p><a href="https://www.behance.net/charmseer" style="color:rgb(195,190,182)"><i class="fab fa-behance-square fa-3x"></i></a></div>
-            <div class="col-md-2"><p><a href="https://learn.unity.com/u/5dd4f932edbc2a001f48c02b?tab=activity" style="color:rgb(195,190,182)"><i class="fab fa-unity fa-3x"></i></a></div>
-            <div class="col-md-2"><p><a href="https://twitter.com/XRwithcharmseer" style="color:rgb(195,190,182)"><i class="fab fa-twitter-square fa-3x"></i></a></div>
-        </div>
- 
-        <!--
-        <div class="row foot" align="center">
-            <div class="col-sm-12"><p><i class="far fa-copyright "></i> 2021, sreeramch</div>
-        </div>
-        -->
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <div class="toggle-wrap" style="justify-content:center;margin-top:1rem;">
+      <span class="toggle-label" id="mode-label-mobile">Dark</span>
+      <div class="toggle" id="theme-toggle-mobile" role="button" aria-label="Toggle light/dark theme">
+        <div class="toggle-thumb"></div>
+      </div>
     </div>
+  </div>
 
+  <main>
 
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-tag">Technical Product Manager · XR Creator</div>
+      <h1 class="hero-name">Sreeram<br>Hrithwik</h1>
+      <h2 class="hero-title">Building the <span>spatial web</span> —<br>one XR experience at a time.</h2>
+      <p class="hero-desc">
+        TPM bridging the gap between immersive technology and product strategy.<br>
+        Crafting AR/VR experiences with Spark AR, Lens Studio, Unity &amp; Blender.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">scroll</span>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="reveal">
+        <div class="section-tag">About</div>
+        <h3 class="section-heading">Who I Am</h3>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>I'm a <strong>Technical Product Manager</strong> with deep roots in XR creation. I started building AR filters and immersive experiences before it was mainstream — shipping lenses on Snapchat, filters on Instagram, and games on itch.io.</p>
+          <p>Today I bring that creative-technical lens to product work: I understand the stack deeply enough to ask the right questions, and I care about the user experience enough to push for the right answers.</p>
+          <p>I'm actively exploring opportunities in <strong>VR/XR Technical Product Management</strong> and <strong>AI Product</strong> — roles where the future of computing is being built right now.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years in XR</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">XR Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Platforms</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Ideas Queued</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="reveal">
+        <div class="section-tag">Stack</div>
+        <h3 class="section-heading">What I Work With</h3>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <div class="skill-group-title">XR Creation</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Spark AR Studio</span>
+            <span class="skill-tag">Lens Studio</span>
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">WebXR</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Product</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Roadmapping</span>
+            <span class="skill-tag">PRDs</span>
+            <span class="skill-tag">Agile / Scrum</span>
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">A/B Testing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Development</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML / CSS / JS</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Three.js</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">AI / Emerging</div>
+          <div class="skill-tags">
+            <span class="skill-tag">LLM Integrations</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Spatial Computing</span>
+            <span class="skill-tag">Computer Vision</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="reveal">
+        <div class="section-tag">Work</div>
+        <h3 class="section-heading">Selected Projects</h3>
+      </div>
+      <div class="projects-grid reveal">
+
+        <div class="project-card">
+          <span class="project-num">01 / XR</span>
+          <div class="project-arrow">&#8599;</div>
+          <div class="project-name">XR Project 1</div>
+          <p class="project-desc">Placeholder — describe the experience, platform, and user impact. What made it interesting to build?</p>
+          <div class="project-tags">
+            <span class="project-tag">Spark AR</span>
+            <span class="project-tag">Instagram</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-num">02 / XR</span>
+          <div class="project-arrow">&#8599;</div>
+          <div class="project-name">XR Project 2</div>
+          <p class="project-desc">Placeholder — describe the experience, platform, and user impact. What made it interesting to build?</p>
+          <div class="project-tags">
+            <span class="project-tag">Lens Studio</span>
+            <span class="project-tag">Snapchat</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-num">03 / Game</span>
+          <div class="project-arrow">&#8599;</div>
+          <div class="project-name">XR Project 3</div>
+          <p class="project-desc">Placeholder — describe the experience, platform, and user impact. What made it interesting to build?</p>
+          <div class="project-tags">
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">itch.io</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-num">04 / XR</span>
+          <div class="project-arrow">&#8599;</div>
+          <div class="project-name">XR Project 4</div>
+          <p class="project-desc">Placeholder — describe the experience, platform, and user impact. What made it interesting to build?</p>
+          <div class="project-tags">
+            <span class="project-tag">Blender</span>
+            <span class="project-tag">WebXR</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-num">05 / XR</span>
+          <div class="project-arrow">&#8599;</div>
+          <div class="project-name">XR Project 5</div>
+          <p class="project-desc">Placeholder — describe the experience, platform, and user impact. What made it interesting to build?</p>
+          <div class="project-tags">
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">AR</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="reveal">
+        <div class="section-tag">Experience</div>
+        <h3 class="section-heading">Where I've Worked</h3>
+      </div>
+      <div class="exp-list reveal">
+
+        <div class="exp-item">
+          <div class="exp-period">Current</div>
+          <div class="exp-content">
+            <div class="exp-role">Technical Product Manager</div>
+            <div class="exp-company">[ Add Company ] — Add Location</div>
+            <ul class="exp-bullets">
+              <li>Add your key achievement with metrics here</li>
+              <li>Add your key achievement with metrics here</li>
+              <li>Add your key achievement with metrics here</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-period">Previous</div>
+          <div class="exp-content">
+            <div class="exp-role">[ Previous Role ]</div>
+            <div class="exp-company">[ Company ] — Location</div>
+            <ul class="exp-bullets">
+              <li>Add your key achievement with metrics here</li>
+              <li>Add your key achievement with metrics here</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-period">XR Creator</div>
+          <div class="exp-content">
+            <div class="exp-role">Independent XR Creator</div>
+            <div class="exp-company">CHARMSEER — YouTube · itch.io · Snapchat · Instagram</div>
+            <ul class="exp-bullets">
+              <li>Designed and shipped AR filters across Instagram and Snapchat platforms</li>
+              <li>Built and published indie games on itch.io using Unity</li>
+              <li>Produced XR project videos and tutorials on YouTube</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="reveal">
+        <div class="section-tag">Contact</div>
+        <h3 class="section-heading">Let's Build Something</h3>
+        <div class="contact-inner">
+          <p class="contact-sub">
+            Open to Technical PM, AI PM, and XR Product roles.<br>
+            If you're building the future of spatial computing — let's talk.
+          </p>
+          <a href="mailto:charmseer@gmail.com" class="contact-email">charmseer@gmail.com</a>
+          <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/sreeram-hrithwik/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/charmseer" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.youtube.com/channel/UCFRmp2Rfzau80TyzDO3rfqA" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://charmseer.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
+            <li><a href="https://www.behance.net/charmseer" target="_blank" rel="noopener">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Sreeram Hrithwik &nbsp;·&nbsp; Built with intention &nbsp;·&nbsp; charmseer</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
