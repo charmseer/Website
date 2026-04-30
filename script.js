@@ -5,7 +5,7 @@
 /* === THEME TOGGLE === */
 (function () {
   const root = document.documentElement;
-  let isDark = true;
+  let isDark = false;
 
   function setTheme(dark) {
     isDark = dark;
@@ -17,7 +17,8 @@
 
   // Restore saved preference
   const saved = localStorage.getItem('theme');
-  if (saved === 'light') setTheme(false);
+  if (saved === 'dark') setTheme(true);
+  else setTheme(false);
 
   // Desktop toggle
   const toggle = document.getElementById('theme-toggle');
