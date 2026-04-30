@@ -347,6 +347,18 @@ h2.hero-title span {
 
 /* Scroll hint */
 .hero-scroll-hint {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: -1.5rem;
+  opacity: 0;
+  animation: fadeIn 1s 1.4s forwards;
+}
+/* .hero-scroll-hint {
   position: absolute;
   bottom: 3rem;
   left: 3rem;
@@ -356,7 +368,8 @@ h2.hero-title span {
   gap: 0.5rem;
   opacity: 0;
   animation: fadeIn 1s 1.4s forwards;
-}
+} */
+
 .scroll-line {
   width: 1px;
   height: 48px;
