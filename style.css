@@ -347,9 +347,9 @@ h2.hero-title span {
 
 /* Scroll hint */
 .hero-scroll-hint {
-  position: relative;
-  bottom: auto;
-  left: auto;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
