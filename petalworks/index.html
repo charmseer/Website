@@ -11,10 +11,14 @@
   <meta property="og:title" content="Petalworks — Grow your focus back"/>
   <meta property="og:description" content="A hands-first mixed-reality focus timer for Meta Quest 3 and 3S. Plant a seed on your real desk, focus with the headset on or off, and come back to watch it bloom."/>
   <meta property="og:url" content="https://charmseer.com/petalworks/"/>
-  <!-- Add a 1200×630 cover image here once you have one:
-  <meta property="og:image" content="https://charmseer.com/petalworks/images/cover.jpg"/> -->
+  <meta property="og:image" content="https://charmseer.com/petalworks/images/cover.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="The Petalworks wordmark and stopwatch-flower logo on a peach-to-green gradient"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
-  <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <link rel="apple-touch-icon" href="images/icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600,100&family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../style.css"/>
@@ -29,6 +33,7 @@
     <a href="../" class="nav-logo">CHARMSEER</a>
     <ul class="nav-links">
       <li><a href="#demo">Demo</a></li>
+      <li><a href="#get">Get It</a></li>
       <li><a href="#story">Story</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#hands">Hands</a></li>
@@ -49,6 +54,7 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="#demo" class="mobile-link">Demo</a>
+    <a href="#get" class="mobile-link">Get It</a>
     <a href="#story" class="mobile-link">Story</a>
     <a href="#gallery" class="mobile-link">Gallery</a>
     <a href="#hands" class="mobile-link">Hands</a>
@@ -66,6 +72,8 @@
 
     <!-- HERO -->
     <section id="hero" class="pw-hero">
+     <div class="pw-hero-grid">
+      <div class="pw-hero-text">
       <div class="hero-tag">Project 02 &nbsp;·&nbsp; Mixed Reality &nbsp;·&nbsp; 2026</div>
       <h1 class="hero-name pw-wordmark">Petalworks</h1>
       <h2 class="hero-title"><span>Grow your focus back.</span><br>Plant a seed on your real desk, focus with the headset on or off, and come back to watch it bloom.</h2>
@@ -80,9 +88,14 @@
         <span class="project-tag">Meta XR SDK</span>
       </div>
       <div class="hero-cta">
-        <a href="#demo" class="btn-primary">Watch the Demo</a>
-        <a href="#story" class="btn-outline">Read the Story</a>
+        <a href="#get" class="btn-primary">Try It on Meta Quest</a>
+        <a href="#demo" class="btn-outline">Watch the Demo</a>
       </div>
+      </div>
+      <div class="pw-hero-art">
+        <img src="images/icon.png" alt="Petalworks app icon: a white stopwatch with a five-petal flower inside, on a peach-to-green gradient" width="320" height="320"/>
+      </div>
+     </div>
     </section>
 
     <!-- DEMO VIDEO -->
@@ -107,6 +120,33 @@
           <div class="pw-play" aria-hidden="true">&#9654;</div>
           <span class="pw-ph-label">Demo video coming soon</span>
           <span class="pw-ph-sub">Real Quest 3 footage · under 3 minutes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET IT / META QUEST STORE -->
+    <section id="get">
+      <div class="reveal">
+        <div class="section-tag">Get Petalworks</div>
+        <h3 class="section-heading">Try It on the Meta Quest Store</h3>
+      </div>
+      <div class="pw-store reveal">
+        <img class="pw-store-poster" src="images/poster.webp" alt="Petalworks key art: the stopwatch-flower logo above the Petalworks wordmark" width="1008" height="1440" loading="lazy"/>
+        <div class="pw-store-body">
+          <span class="pw-store-badge">Coming mid-December 2026</span>
+          <p class="pw-store-lead">Plant your first seed on January&nbsp;1 and watch a year of focus grow on your desk.</p>
+          <ul class="pw-store-facts">
+            <li>Free to start, with an optional one-time unlock</li>
+            <li>Meta Quest 3 and 3S, mixed reality</li>
+            <li>Hands only; no controllers needed</li>
+            <li>No account, no ads, no data leaves the headset</li>
+          </ul>
+          <!--
+            STORE: when the listing is live, set href below to the Meta Horizon Store URL
+            and delete the "pw-store-note" line.
+          -->
+          <a href="#get" class="btn-primary pw-store-btn">Try It on the Meta Quest Store &#8599;</a>
+          <span class="pw-store-note">The store link goes live at launch.</span>
         </div>
       </div>
     </section>

@@ -66,7 +66,8 @@ Each project with its own page gets a folder, so `petalworks/index.html` is serv
 ### Petalworks placeholders
 - **Video:** in `petalworks/index.html`, find `VIDEO:`. Delete the placeholder div and uncomment the YouTube `<iframe>`, replacing `VIDEO_ID`.
 - **Screenshots:** add them to `petalworks/images/` and swap each `<div class="pw-shot-ph">` for an `<img>` (see the `IMAGES:` comment). Use 16:9.
-- **Link preview:** add a 1200×630 cover image and uncomment the `og:image` line in the `<head>`.
+- **Store link:** find `STORE:` and set the button's `href` to the Meta Horizon Store listing once it's live.
+- **Logos:** `petalworks/images/` holds the app icon, white logo, banner (the video backdrop), vertical poster (store panel), `cover.jpg` (1200×630 link preview) and `favicon.png`.
 
 ## Font
 Uses Google Fonts:

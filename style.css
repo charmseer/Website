@@ -869,6 +869,27 @@ h1.pw-wordmark {
   letter-spacing: -0.02em;
 }
 .pw-hero .hero-desc { max-width: 560px; margin-bottom: 1.5rem; }
+.pw-hero-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+.pw-hero-art {
+  opacity: 0;
+  animation: fadeUp 0.9s 0.5s forwards;
+}
+.pw-hero-art img {
+  display: block;
+  width: clamp(180px, 24vw, 280px);
+  height: auto;
+  border-radius: 22%;
+  box-shadow: 0 24px 60px rgba(29, 181, 132, 0.25), 0 0 0 1px var(--border2);
+  transform: rotate(-4deg);
+  transition: transform 0.4s ease;
+}
+.pw-hero-art img:hover { transform: rotate(0deg) scale(1.03); }
 .pw-hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -932,10 +953,30 @@ h1.pw-wordmark {
   text-align: center;
   padding: 1rem;
   background:
-    radial-gradient(ellipse at 30% 70%, rgba(143, 174, 139, 0.22), transparent 60%),
-    radial-gradient(ellipse at 75% 30%, rgba(201, 123, 90, 0.16), transparent 55%),
+    linear-gradient(rgba(8, 12, 18, 0.55), rgba(8, 12, 18, 0.55)),
+    url('petalworks/images/banner.webp') center / cover no-repeat,
     var(--bg3);
 }
+/* With the banner behind it, the play button and label sit in a strip under the logo */
+.pw-video-placeholder {
+  justify-content: flex-end;
+  padding-bottom: 5%;
+  background:
+    linear-gradient(to bottom, rgba(8, 12, 18, 0) 55%, rgba(8, 12, 18, 0.7)),
+    url('petalworks/images/banner.webp') center / cover no-repeat,
+    var(--bg3);
+}
+.pw-video-placeholder .pw-play {
+  width: 56px;
+  height: 56px;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  border-color: #fff;
+  color: #fff;
+  background: rgba(8, 12, 18, 0.35);
+}
+.pw-video-placeholder .pw-ph-label { color: #fff; }
+.pw-video-placeholder .pw-ph-sub { color: rgba(255, 255, 255, 0.82); }
 .pw-play {
   width: 72px;
   height: 72px;
@@ -1066,13 +1107,16 @@ h4.pw-block-title {
 }
 .pw-shot-ph {
   position: relative;
-  background:
-    radial-gradient(circle at 50% 60%, rgba(143, 174, 139, 0.28) 0 14%, transparent 15%),
-    radial-gradient(circle at 42% 48%, rgba(242, 181, 196, 0.30) 0 8%, transparent 9%),
-    radial-gradient(circle at 58% 48%, rgba(242, 181, 196, 0.30) 0 8%, transparent 9%),
-    radial-gradient(circle at 50% 40%, rgba(242, 181, 196, 0.30) 0 8%, transparent 9%),
-    linear-gradient(160deg, var(--bg3), var(--card));
+  background: linear-gradient(160deg, var(--bg3), var(--card));
 }
+.pw-shot-ph::before {
+  content: '';
+  position: absolute;
+  inset: 18% 0 22%;
+  background: url('petalworks/images/logo-white.png') center / contain no-repeat;
+  opacity: 0.16;
+}
+[data-theme="light"] .pw-shot-ph::before { filter: brightness(0.3) sepia(1) hue-rotate(60deg); opacity: 0.18; }
 .pw-shot-ph span {
   position: absolute;
   top: 0.8rem;
@@ -1161,6 +1205,82 @@ h4.pw-block-title {
   color: var(--text2);
 }
 
+/* Get it / Meta Quest Store */
+.pw-store {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border2);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.pw-store::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD59A, #8FC46A, #1DB584);
+}
+.pw-store-poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+.pw-store-badge {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pw-clay);
+  border: 1px solid var(--pw-clay);
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 1.2rem;
+}
+.pw-store-lead {
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+  max-width: 520px;
+}
+.pw-store-facts {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.pw-store-facts li {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  line-height: 1.8;
+  color: var(--text2);
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+.pw-store-facts li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.pw-store-btn { margin-right: 1rem; }
+.pw-store-note {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+  margin-top: 0.8rem;
+}
+
 /* Meta capabilities */
 .pw-caps {
   display: grid;
@@ -1201,6 +1321,11 @@ h4.pw-block-title {
 }
 @media (max-width: 768px) {
   .pw-hero { min-height: auto; }
+  .pw-hero-grid { grid-template-columns: 1fr; gap: 0; }
+  .pw-hero-art { order: -1; margin-bottom: 1.75rem; }
+  .pw-hero-art img { width: 96px; transform: none; border-radius: 22%; }
+  .pw-store { grid-template-columns: 1fr; gap: 2rem; padding: 1.75rem 1.5rem; }
+  .pw-store-poster { max-width: 200px; }
   .pw-block { grid-template-columns: 1fr; gap: 0.8rem; padding: 2rem 0; }
   .pw-why { padding: 2.5rem 1.5rem; }
   .pw-callout { padding: 1.5rem 1.25rem; }
