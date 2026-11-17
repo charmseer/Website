@@ -59,6 +59,15 @@ Then add to style.css:
 .project-img { width:100%; aspect-ratio:16/9; object-fit:cover; margin-bottom:1rem; }
 ```
 
+## Project pages
+
+Each project with its own page gets a folder, so `petalworks/index.html` is served at `charmseer.com/petalworks`. It reuses `style.css` and `script.js`; its own styles are at the bottom of `style.css` under `PETALWORKS PROJECT PAGE`, scoped to `body.page-petalworks`.
+
+### Petalworks placeholders
+- **Video:** in `petalworks/index.html`, find `VIDEO:`. Delete the placeholder div and uncomment the YouTube `<iframe>`, replacing `VIDEO_ID`.
+- **Screenshots:** add them to `petalworks/images/` and swap each `<div class="pw-shot-ph">` for an `<img>` (see the `IMAGES:` comment). Use 16:9.
+- **Link preview:** add a 1200×630 cover image and uncomment the `og:image` line in the `<head>`.
+
 ## Font
 Uses Google Fonts:
 - **Syne** (headings, body) — bold, geometric
