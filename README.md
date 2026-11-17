@@ -59,6 +59,10 @@ Then add to style.css:
 .project-img { width:100%; aspect-ratio:16/9; object-fit:cover; margin-bottom:1rem; }
 ```
 
+## After changing style.css or script.js
+
+Both pages load them as `style.css?v=…` and `script.js?v=…`. Bump that date in `index.html` and `petalworks/index.html` whenever you change either file. GitHub Pages lets browsers reuse cached files for 10 minutes, and without the bump a visitor can get the new page with the old styles.
+
 ## Project pages
 
 Each project with its own page gets a folder, so `petalworks/index.html` is served at `charmseer.com/petalworks`. It reuses `style.css` and `script.js`; its own styles are at the bottom of `style.css` under `PETALWORKS PROJECT PAGE`, scoped to `body.page-petalworks`.
