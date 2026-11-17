@@ -59,6 +59,16 @@ Then add to style.css:
 .project-img { width:100%; aspect-ratio:16/9; object-fit:cover; margin-bottom:1rem; }
 ```
 
+## Project pages
+
+Each project with its own page gets a folder, so `petalworks/index.html` is served at `charmseer.com/petalworks`. It reuses `style.css` and `script.js`; its own styles are at the bottom of `style.css` under `PETALWORKS PROJECT PAGE`, scoped to `body.page-petalworks`.
+
+### Petalworks placeholders
+- **Video:** in `petalworks/index.html`, find `VIDEO:`. Delete the placeholder div and uncomment the YouTube `<iframe>`, replacing `VIDEO_ID`.
+- **Screenshots:** add them to `petalworks/images/` and swap each `<div class="pw-shot-ph">` for an `<img>` (see the `IMAGES:` comment). Use 16:9.
+- **Store link:** find `STORE:` and set the button's `href` to the Meta Horizon Store listing once it's live.
+- **Logos:** `petalworks/images/` holds the app icon, white logo, banner (the video backdrop), vertical poster (store panel), `cover.jpg` (1200×630 link preview) and `favicon.png`.
+
 ## Font
 Uses Google Fonts:
 - **Syne** (headings, body) — bold, geometric

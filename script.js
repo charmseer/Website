@@ -70,6 +70,13 @@
   let stars = [];
   let W, H;
 
+  // Pages can set their own particle colours with a CSS variable, e.g.
+  // --star-colors: 143,174,139 | 201,123,90;  (default: the original cyan)
+  const colorVar = getComputedStyle(canvas).getPropertyValue('--star-colors').trim();
+  const palette = colorVar
+    ? colorVar.split('|').map(c => c.trim()).filter(Boolean)
+    : ['0, 212, 255'];
+
   function resize() {
     W = canvas.width  = window.innerWidth;
     H = canvas.height = window.innerHeight;
@@ -85,6 +92,7 @@
         r:       Math.random() * 1.4 + 0.2,
         speed:   Math.random() * 0.18 + 0.04,
         opacity: Math.random() * 0.55 + 0.15,
+        rgb:     palette[Math.floor(Math.random() * palette.length)],
       });
     }
   }
@@ -94,7 +102,7 @@
     stars.forEach(s => {
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 212, 255, ${s.opacity})`;
+      ctx.fillStyle = `rgba(${s.rgb}, ${s.opacity})`;
       ctx.fill();
       s.y -= s.speed;
       if (s.y + s.r < 0) {

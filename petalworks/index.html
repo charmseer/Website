@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Petalworks — Sreeram Hrithwik</title>
+  <meta name="description" content="Petalworks: a hands-first mixed-reality focus timer for Meta Quest 3 and 3S. Plant a seed on your real desk, focus with the headset on or off, and come back to watch it bloom."/>
+
+  <!-- Link previews (Devpost, LinkedIn, chat apps) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Petalworks — Grow your focus back"/>
+  <meta property="og:description" content="A hands-first mixed-reality focus timer for Meta Quest 3 and 3S. Plant a seed on your real desk, focus with the headset on or off, and come back to watch it bloom."/>
+  <meta property="og:url" content="https://charmseer.com/petalworks/"/>
+  <meta property="og:image" content="https://charmseer.com/petalworks/images/cover.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="The Petalworks wordmark and stopwatch-flower logo on a peach-to-green gradient"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <link rel="apple-touch-icon" href="images/icon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600,100&family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body class="page-petalworks">
+
+  <div class="cursor" id="cursor"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="../" class="nav-logo">CHARMSEER</a>
+    <ul class="nav-links">
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#get">Get It</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#hands">Hands</a></li>
+      <li><a href="#tech">Tech</a></li>
+      <li><a href="../#projects">&larr; Portfolio</a></li>
+      <li>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="mode-label">Dark</span>
+          <div class="toggle" id="theme-toggle" role="button" aria-label="Toggle light/dark theme">
+            <div class="toggle-thumb"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-mobile-btn" id="nav-mobile-btn" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#demo" class="mobile-link">Demo</a>
+    <a href="#get" class="mobile-link">Get It</a>
+    <a href="#story" class="mobile-link">Story</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#hands" class="mobile-link">Hands</a>
+    <a href="#tech" class="mobile-link">Tech</a>
+    <a href="../#projects" class="mobile-link">&larr; Portfolio</a>
+    <div class="toggle-wrap" style="justify-content:center;margin-top:1rem;">
+      <span class="toggle-label" id="mode-label-mobile">Dark</span>
+      <div class="toggle" id="theme-toggle-mobile" role="button" aria-label="Toggle light/dark theme">
+        <div class="toggle-thumb"></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="pw-hero">
+     <div class="pw-hero-grid">
+      <div class="pw-hero-text">
+      <div class="hero-tag">Project 02 &nbsp;·&nbsp; Mixed Reality &nbsp;·&nbsp; 2026</div>
+      <h1 class="hero-name pw-wordmark">Petalworks</h1>
+      <h2 class="hero-title"><span>Grow your focus back.</span><br>Plant a seed on your real desk, focus with the headset on or off, and come back to watch it bloom.</h2>
+      <p class="hero-desc">
+        A hands-first mixed-reality focus timer for Meta Quest 3 and 3S. Built solo in Unity with the Meta XR SDK, over 20+ headset builds and 180+ pieces of playtest feedback.
+      </p>
+      <div class="pw-hero-tags">
+        <span class="project-tag">Quest 3 / 3S</span>
+        <span class="project-tag">Mixed Reality</span>
+        <span class="project-tag">Hand Tracking</span>
+        <span class="project-tag">Unity</span>
+        <span class="project-tag">Meta XR SDK</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#get" class="btn-primary">Try It on Meta Quest</a>
+        <a href="#demo" class="btn-outline">Watch the Demo</a>
+      </div>
+      </div>
+      <div class="pw-hero-art">
+        <img src="images/icon.png" alt="Petalworks app icon: a white stopwatch with a five-petal flower inside, on a peach-to-green gradient" width="320" height="320"/>
+      </div>
+     </div>
+    </section>
+
+    <!-- DEMO VIDEO -->
+    <section id="demo">
+      <div class="reveal">
+        <div class="section-tag">Demo</div>
+        <h3 class="section-heading">See It Bloom</h3>
+      </div>
+      <div class="pw-video reveal">
+        <!--
+          VIDEO: once the demo is public on YouTube, delete the placeholder <div> below
+          and uncomment the <iframe>, replacing VIDEO_ID with the part after "v=" in the URL.
+          (For Vimeo use https://player.vimeo.com/video/VIDEO_ID instead.)
+
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+                title="Petalworks demo video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen loading="lazy"></iframe>
+        -->
+        <div class="pw-video-placeholder" role="img" aria-label="Demo video coming soon">
+          <div class="pw-play" aria-hidden="true">&#9654;</div>
+          <span class="pw-ph-label">Demo video coming soon</span>
+          <span class="pw-ph-sub">Real Quest 3 footage · under 3 minutes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET IT / META QUEST STORE -->
+    <section id="get">
+      <div class="reveal">
+        <div class="section-tag">Get Petalworks</div>
+        <h3 class="section-heading">Try It on the Meta Quest Store</h3>
+      </div>
+      <div class="pw-store reveal">
+        <img class="pw-store-poster" src="images/poster.webp" alt="Petalworks key art: the stopwatch-flower logo above the Petalworks wordmark" width="1008" height="1440" loading="lazy"/>
+        <div class="pw-store-body">
+          <span class="pw-store-badge">Coming mid-December 2026</span>
+          <p class="pw-store-lead">Plant your first seed on January&nbsp;1 and watch a year of focus grow on your desk.</p>
+          <ul class="pw-store-facts">
+            <li>Free to start, with an optional one-time unlock</li>
+            <li>Meta Quest 3 and 3S, mixed reality</li>
+            <li>Hands only; no controllers needed</li>
+            <li>No account, no ads, no data leaves the headset</li>
+          </ul>
+          <!--
+            STORE: when the listing is live, set href below to the Meta Horizon Store URL
+            and delete the "pw-store-note" line.
+          -->
+          <a href="#get" class="btn-primary pw-store-btn">Try It on the Meta Quest Store &#8599;</a>
+          <span class="pw-store-note">The store link goes live at launch.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AT A GLANCE -->
+    <section id="glance">
+      <div class="reveal">
+        <div class="section-tag">At a Glance</div>
+        <h3 class="section-heading">The Project</h3>
+      </div>
+      <div class="pw-glance reveal">
+        <div class="pw-stats">
+          <div class="stat-card">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Headset builds in 18 days</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">180+</span>
+            <span class="stat-label">Playtest notes, each with a fix</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">~3</span>
+            <span class="stat-label">Weeks, built solo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Controllers needed</span>
+          </div>
+        </div>
+        <dl class="pw-facts">
+          <div><dt>Role</dt><dd>Solo: product, design, development, playtesting</dd></div>
+          <div><dt>Platform</dt><dd>Meta Quest 3 and 3S, mixed reality</dd></div>
+          <div><dt>Stack</dt><dd>Unity, C#, Meta XR SDK</dd></div>
+          <div><dt>Status</dt><dd>Launching mid-December 2026 on the Meta Horizon Store</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story">
+      <div class="reveal">
+        <div class="section-tag">The Story</div>
+        <h3 class="section-heading">About the Project</h3>
+      </div>
+
+      <div class="pw-blocks">
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">Inspiration</h4>
+          <div class="pw-prose">
+            <p>Endless short-video feeds have trained many of us to switch every few seconds. Focus timers try to help, but most either <strong>punish</strong> you (get distracted and your plant dies) or are <strong>forgettable</strong> (a number counting down). On a headset there's one more problem: people can't wear one for hours, and an app that treats taking it off as failure doesn't fit the device.</p>
+            <p>So I flipped it around. <strong>The headset is where you come back to, not where you have to stay.</strong> Plant a seed on your real desk, take the headset off, do your work, and come back to a flower blooming where you left it. Nothing ever dies.</p>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">What it does</h4>
+          <div class="pw-prose">
+            <ul>
+              <li><strong>Plant</strong> a seed on your real desk and set your time, by touch or with a glance and a pinch.</li>
+              <li><strong>Focus with the headset on or off.</strong> Your session keeps going either way.</li>
+              <li><strong>Come back</strong> and watch your flower bloom, then say honestly how it went. Nothing ever dies, and honesty is never punished.</li>
+              <li><strong>Your garden remembers.</strong> Over the week, your desk becomes a picture of where your focus went, and the blooms you love become part of your space.</li>
+              <li><strong>Reasons to return:</strong> new flowers, small visitors and rewards that can only be earned by focusing, never bought.</li>
+            </ul>
+            <p>No account, no ads, no data leaves the headset.</p>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">How I built it</h4>
+          <div class="pw-prose">
+            <p>Built in Unity with the <strong>Meta XR SDK</strong> for Quest 3 and 3S:</p>
+            <ul>
+              <li><strong>Hands and gaze</strong> through the Interaction SDK, so every action works by touch <em>or</em> look-and-pinch, with no controllers.</li>
+              <li><strong>Scene understanding and spatial anchors</strong>, so the garden finds your desk and stays there from one day to the next.</li>
+              <li><strong>Sessions designed around the headset coming off</strong>, so stepping away never costs you your progress.</li>
+              <li><strong>Tested in the Meta XR Simulator</strong> and on a real headset every build, with the UI designed for glasses-class fields of view.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">What I learned</h4>
+          <div class="pw-prose">
+            <p>Over <strong>20+ builds in 18 days</strong>, I logged <strong>180+ pieces of playtest feedback</strong>, each with a fix. Three lessons shaped the app most:</p>
+            <ul>
+              <li><strong>Don't make people choose what they don't understand.</strong> A setting that confused testers became a single reassuring line.</li>
+              <li><strong>Show less, sooner.</strong> New users reach their first bloom quickly, and the rest of the garden opens up as they grow.</li>
+              <li><strong>A timer alone doesn't bring people back.</strong> Playtests shaped what makes the garden worth returning to, week after week.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">Challenges</h4>
+          <div class="pw-prose">
+            <ul>
+              <li><strong>Small targets in hand tracking:</strong> forgiving targets and clear feedback, so nothing gets lost or misread.</li>
+              <li><strong>Rooms I've never seen:</strong> placement and recovery that work on any desk, scanned or not.</li>
+              <li><strong>Solo in about three weeks:</strong> a strict cut line, and every change checked on the headset.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">What's next</h4>
+          <div class="pw-prose">
+            <p><strong>Launching mid-December 2026 on the Meta Horizon Store</strong>, in time for New Year's resolutions. Free to start, with an optional one-time unlock. After launch: more to grow, more ways to interact, and more languages.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="reveal">
+        <div class="section-tag">Gallery</div>
+        <h3 class="section-heading">In the Headset</h3>
+      </div>
+      <!--
+        IMAGES: put screenshots in petalworks/images/ and swap each placeholder <div class="pw-shot-ph">…</div>
+        for an <img>, keeping the figcaption. Example:
+        <img src="images/01-planting.jpg" alt="A hand dropping a seed into a planter on a real desk" loading="lazy"/>
+        16:9 works best (1920×1080 straight from the headset is fine).
+      -->
+      <div class="pw-gallery reveal">
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>01</span></div>
+          <figcaption>Planting a seed on a real desk</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>02</span></div>
+          <figcaption>Setting the time with a look and a pinch</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>03</span></div>
+          <figcaption>Coming back: the flower mid-bloom</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>04</span></div>
+          <figcaption>Your week of focus, at a glance</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>05</span></div>
+          <figcaption>The blooms you keep, on your desk</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>06</span></div>
+          <figcaption>Looking back on where your time went</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- HAND INTERACTIONS -->
+    <section id="hands">
+      <div class="reveal">
+        <div class="section-tag">Hand Interactions</div>
+        <h3 class="section-heading">Touch It, or Look and Pinch</h3>
+      </div>
+      <div class="pw-hands reveal">
+        <div class="pw-prose pw-lead">
+          <p>Petalworks is hands-only, end to end; a controller is never needed. It's built on the Meta Interaction SDK, and <strong>every action works two ways: by direct touch, and by looking at it and pinching.</strong> That second path keeps small objects easy to use and lets you stay seated, without reaching across the desk.</p>
+        </div>
+        <div class="pw-steps">
+          <div class="pw-step">
+            <span class="pw-step-num">Plant</span>
+            <p>Pick up a seed and drop it in. Targets are forgiving, so a missed drop is never lost.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Set the time</span>
+            <p>Turn a real-feeling dial with your hand. Clear feedback tells you when your time is set.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Press</span>
+            <p>Buttons you press with a fingertip, with a hint that shows what each one does before you press it.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Arrange</span>
+            <p>Pick up your garden and set it down anywhere on your desk. Keep the blooms you love close by.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Play</span>
+            <p>Small visitors react when you reach out to them, by touch or by look-and-pinch.</p>
+          </div>
+        </div>
+        <div class="pw-callout">
+          <div class="pw-callout-title">Designed from playtests</div>
+          <p>Every gesture was tuned across 20+ headset builds and 180+ pieces of playtest feedback: first-run guidance that shows instead of tells, menus that never open by accident, and a few SDK edge cases that only showed up on a real headset.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- META CAPABILITIES -->
+    <section id="tech">
+      <div class="reveal">
+        <div class="section-tag">Meta XR Capabilities</div>
+        <h3 class="section-heading">What It Runs On</h3>
+      </div>
+      <div class="pw-caps reveal">
+        <div class="skill-group">
+          <div class="skill-group-title">Hands-first</div>
+          <p>No controller is ever needed. Every action works by direct touch and by look-and-pinch.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Gaze Interactions</div>
+          <p>Look at almost anything and pinch to use it, so small targets stay easy to hit.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Hand Tracking</div>
+          <p>Grab, turn, carry and press, all with your own hands.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Passthrough</div>
+          <p>The whole experience happens on your real desk. The garden is part of your room, not a virtual scene.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">MR Utility Kit</div>
+          <p>Finds real desks and surfaces for your garden, and still works in rooms that haven't been scanned.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Spatial Anchors</div>
+          <p>Your garden comes back in the same spot on your desk, day after day.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">FoV-aware Design</div>
+          <p>Essential UI is designed for narrower, glasses-class fields of view.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Focus-aware Lifecycle</div>
+          <p>Taking the headset off, opening system windows or closing the app never costs you a session.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Meta XR Simulator</div>
+          <p>Fast testing in the editor, then a real headset pass on every build.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY VR -->
+    <section id="why">
+      <div class="reveal">
+        <div class="section-tag">Why VR</div>
+        <h3 class="section-heading">Technology That Gives Attention Back</h3>
+      </div>
+      <div class="pw-why reveal">
+        <div class="pw-prose">
+          <p>I've been working in VR for the last seven or eight years, and what excites me most right now is that it's finally starting to fit <em>around</em> our lives instead of asking us to leave them.</p>
+          <p>For most of that time the pitch was escape: put on a headset and go somewhere else. Mixed reality flips that. Your real desk, your real room, become the canvas, and hands and eyes make the interaction feel like touching things rather than operating software. Building Petalworks, the moment that sold me was a playtester's reaction to a little bee landing on a flower on their own desk: <em>"Loved the bee, it's too cute!!!"</em> Nobody had to explain it.</p>
+          <p>I'm also excited about the shift toward lighter devices and shorter sessions. The future I want isn't wearing a headset for eight hours; it's a calm place you check in with for a few minutes, that remembers where you left things, and that sends you back to your day a little better off. Persistent anchors, glasses-class hardware and designing for a narrower field of view all point that way.</p>
+          <p>After years of watching the medium grow, and at a time when so much tech is built to keep us scrolling, VR has a real chance to be the opposite: <strong>technology that gives people their attention back.</strong> That's what I want to keep building.</p>
+        </div>
+        <div class="pw-why-cta">
+          <a href="../#projects" class="btn-outline">&larr; More Projects</a>
+          <a href="../#contact" class="btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 charmseer &nbsp;·&nbsp; Petalworks &nbsp;·&nbsp; <a href="../" class="pw-footer-link">Back to portfolio</a></span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
