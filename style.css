@@ -1474,12 +1474,42 @@ h4.pw-block-title {
   background: var(--card);
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.3s, transform 0.3s;
+  transition: border-color 0.3s;
 }
-.case-cta-band:hover { border-color: var(--accent); transform: translateY(-3px); }
-.case-cta-band:hover .case-cta-band-btn { opacity: 0.85; }
+.case-cta-band:hover { border-color: var(--accent); }
+.case-cta-band-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+/* Instagram button: a quiet outline button (glyph + label in the text colour,
+   white in dark mode); Instagram's gradient shows only as a soft tint on hover */
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  clip-path: var(--clip);
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+.btn-instagram:hover {
+  background: linear-gradient(45deg,
+    rgba(245, 133, 41, 0.14) 0%, rgba(221, 42, 123, 0.14) 45%,
+    rgba(129, 52, 175, 0.14) 75%, rgba(81, 91, 212, 0.14) 100%);
+  border-color: rgba(221, 42, 123, 0.45);
+  transform: translateY(-2px);
+}
+.ig-glyph { width: 1.15rem; height: 1.15rem; flex-shrink: 0; }
 .case-cta-band-text {
   display: flex;
   flex-direction: column;
