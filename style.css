@@ -677,6 +677,69 @@ h2.hero-title span {
   color: var(--accent);
   font-weight: 700;
 }
+.exp-bullets strong { color: var(--text); font-weight: 700; }
+
+/* Several roles at one company, newest first, joined by a timeline line */
+.exp-ladder {
+  position: relative;
+  margin-top: 1.6rem;
+  padding-left: 1.6rem;
+  border-left: 1px solid var(--border);
+}
+.exp-step {
+  position: relative;
+  padding-bottom: 1.9rem;
+}
+.exp-step:last-child { padding-bottom: 0; }
+.exp-step::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.6rem - 5px);
+  top: 0.38rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+}
+.exp-step-current::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+.exp-step-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.9rem;
+  margin-bottom: 0.7rem;
+}
+.exp-step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.exp-step-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+}
+.exp-project {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 1rem 0 0.55rem;
+}
+.exp-step-head + .exp-project { margin-top: 0; }
+.exp-project a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.exp-project a:hover { border-color: var(--accent); }
 
 /* === CONTACT === */
 #contact { text-align: center; }
