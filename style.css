@@ -444,6 +444,14 @@ h2.hero-title span {
   margin-bottom: 1.1rem;
 }
 .about-text p strong { color: var(--text); }
+.about-text a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.about-text a:hover { border-color: var(--accent); }
 
 .about-stats {
   display: grid;
@@ -678,6 +686,14 @@ h2.hero-title span {
   font-weight: 700;
 }
 .exp-bullets strong { color: var(--text); font-weight: 700; }
+.exp-bullets a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.exp-bullets a:hover { border-color: var(--accent); }
 
 /* Several roles at one company, newest first, joined by a timeline line */
 .exp-ladder {
