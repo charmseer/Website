@@ -65,7 +65,9 @@ Both pages load them as `style.css?v=…` and `script.js?v=…`. Bump that date 
 
 ## Project pages
 
-Each project with its own page gets a folder, so `petalworks/index.html` is served at `charmseer.com/petalworks`. It reuses `style.css` and `script.js`; its own styles are at the bottom of `style.css` under `PETALWORKS PROJECT PAGE`, scoped to `body.page-petalworks`.
+Each project with its own page gets a folder, so `petalworks/index.html` is served at `charmseer.com/petalworks`. They reuse `style.css` and `script.js`:
+- **Petalworks** has its own palette and styles under `PETALWORKS PROJECT PAGE`, scoped to `body.page-petalworks`.
+- **Other case studies** (like `standard-industry-modules/`) use `body.page-case`: the same layout in the site's own colours, styled under `CASE-STUDY PAGES`. Copy that page to start a new one.
 
 ### Petalworks placeholders
 - **Video:** in `petalworks/index.html`, find `VIDEO:`. Delete the placeholder div and uncomment the YouTube `<iframe>`, replacing `VIDEO_ID`.

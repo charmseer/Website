@@ -1396,12 +1396,64 @@ h4.pw-block-title {
 .pw-footer-link { color: var(--accent); text-decoration: none; }
 .pw-footer-link:hover { text-decoration: underline; }
 
-/* This page has more nav links than the homepage, so it switches to the menu button sooner */
-.page-petalworks .nav-links a { white-space: nowrap; }
+/* Project pages have more nav links than the homepage, so they switch to the menu button sooner */
+.page-petalworks .nav-links a,
+.page-case .nav-links a { white-space: nowrap; }
 @media (max-width: 1024px) {
-  .page-petalworks .nav-links { display: none; }
-  .page-petalworks .nav-mobile-btn { display: block; }
+  .page-petalworks .nav-links,
+  .page-case .nav-links { display: none; }
+  .page-petalworks .nav-mobile-btn,
+  .page-case .nav-mobile-btn { display: block; }
 }
+
+/* ============================================================
+   CASE-STUDY PAGES (e.g. standard-industry-modules/index.html)
+   Reuse the Petalworks page layout in the site's own palette.
+   ============================================================ */
+.page-case { --pw-clay: var(--accent2); }
+/* Product names here are longer than "Sreeram", so the hero title is a size down */
+.page-case h1.hero-name { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; }
+
+/* Trailer placeholder without the Petalworks banner */
+.page-case .pw-video-placeholder {
+  justify-content: center;
+  padding-bottom: 1rem;
+  background:
+    radial-gradient(ellipse at 30% 70%, var(--accent-glow), transparent 60%),
+    radial-gradient(ellipse at 75% 30%, var(--accent-glow), transparent 55%),
+    var(--bg3);
+}
+.page-case .pw-video-placeholder .pw-play {
+  width: 72px;
+  height: 72px;
+  font-size: 1.4rem;
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+.page-case .pw-video-placeholder .pw-ph-label { color: var(--text); }
+.page-case .pw-video-placeholder .pw-ph-sub { color: var(--text2); }
+
+/* No Petalworks logo watermark in this page's screenshot placeholders */
+.page-case .pw-shot-ph::before { content: none; }
+
+.case-free {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--accent);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  vertical-align: middle;
+}
+.case-cta-lead {
+  font-family: 'Syne', sans-serif !important;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem) !important;
+  font-weight: 700;
+  line-height: 1.35 !important;
+  color: var(--text) !important;
+}
+#try .section-tag { margin-bottom: 1.2rem; }
 
 @media (max-width: 900px) {
   .pw-glance { grid-template-columns: 1fr; gap: 2.5rem; }

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Standard Industry Modules — Sreeram Hrithwik</title>
+  <meta name="description" content="Standard Industry Modules: AutoVRse's first standalone VR training app on the Meta Quest Store, with 12 industrial safety modules. Product-led end to end by Sreeram Hrithwik."/>
+
+  <!-- Link previews (LinkedIn, chat apps) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Standard Industry Modules — VR safety training on Meta Quest"/>
+  <meta property="og:description" content="AutoVRse's first standalone VR training app: 12 industrial safety procedures rebuilt in VR. Product-led end to end by Sreeram Hrithwik."/>
+  <meta property="og:url" content="https://charmseer.com/standard-industry-modules/"/>
+  <!-- Add a 1200×630 cover image here once you have one:
+  <meta property="og:image" content="https://charmseer.com/standard-industry-modules/images/cover.jpg"/> -->
+
+  <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css?v=2026-11-26c"/>
+</head>
+<body class="page-case">
+
+  <div class="cursor" id="cursor"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="../" class="nav-logo">CHARMSEER</a>
+    <ul class="nav-links">
+      <li><a href="#product">Product</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#role">My Role</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="../#projects">&larr; Portfolio</a></li>
+      <li>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="mode-label">Dark</span>
+          <div class="toggle" id="theme-toggle" role="button" aria-label="Toggle light/dark theme">
+            <div class="toggle-thumb"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-mobile-btn" id="nav-mobile-btn" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#product" class="mobile-link">Product</a>
+    <a href="#modules" class="mobile-link">Modules</a>
+    <a href="#role" class="mobile-link">My Role</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="../#projects" class="mobile-link">&larr; Portfolio</a>
+    <div class="toggle-wrap" style="justify-content:center;margin-top:1rem;">
+      <span class="toggle-label" id="mode-label-mobile">Dark</span>
+      <div class="toggle" id="theme-toggle-mobile" role="button" aria-label="Toggle light/dark theme">
+        <div class="toggle-thumb"></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="pw-hero">
+      <div class="hero-tag">Project 01 &nbsp;·&nbsp; VR Training &nbsp;·&nbsp; AutoVRse &nbsp;·&nbsp; 2026</div>
+      <h1 class="hero-name">Standard Industry Modules</h1>
+      <h2 class="hero-title"><span>Real industrial procedures, rebuilt in VR.</span><br>AutoVRse's first standalone training app, live on the Meta Quest Store.</h2>
+      <p class="hero-desc">
+        I conceived the app and owned it end to end as Technical Product Manager: the pitch, storyboards, art direction, technical leadership, public launch and the growth plan.
+      </p>
+      <div class="pw-hero-tags">
+        <span class="project-tag">Meta Quest 3 / 3S</span>
+        <span class="project-tag">Unity</span>
+        <span class="project-tag">VR Training</span>
+        <span class="project-tag">Hand Tracking</span>
+        <span class="project-tag">Product Lead</span>
+      </div>
+      <div class="hero-cta">
+        <a href="https://www.meta.com/en-gb/experiences/autovrse-standard-industry-modules/1046743811173548/" class="btn-primary" target="_blank" rel="noopener">View on Meta Quest Store &#8599;</a>
+        <a href="#role" class="btn-outline">My Role</a>
+      </div>
+    </section>
+
+    <!-- TRAILER -->
+    <section id="trailer">
+      <div class="reveal">
+        <div class="section-tag">Trailer</div>
+        <h3 class="section-heading">Learn by Doing</h3>
+      </div>
+      <div class="pw-video reveal">
+        <!--
+          VIDEO: when there's a public trailer on YouTube, delete the placeholder <div> below
+          and uncomment the <iframe>, replacing VIDEO_ID with the part after "v=" in the URL.
+
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+                title="Standard Industry Modules trailer"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen loading="lazy"></iframe>
+        -->
+        <div class="pw-video-placeholder" role="img" aria-label="Trailer coming soon">
+          <div class="pw-play" aria-hidden="true">&#9654;</div>
+          <span class="pw-ph-label">Trailer coming soon</span>
+          <span class="pw-ph-sub">In-headset footage from Meta Quest 3</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AT A GLANCE -->
+    <section id="glance">
+      <div class="reveal">
+        <div class="section-tag">At a Glance</div>
+        <h3 class="section-heading">The Project</h3>
+      </div>
+      <div class="pw-glance reveal">
+        <div class="pw-stats">
+          <div class="stat-card">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Industrial safety modules</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5–15</span>
+            <span class="stat-label">Minutes per session</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Modules free to try</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1st</span>
+            <span class="stat-label">AutoVRse standalone app</span>
+          </div>
+        </div>
+        <dl class="pw-facts">
+          <div><dt>Role</dt><dd>Technical Product Manager, XR: product owner end to end</dd></div>
+          <div><dt>Company</dt><dd>AutoVRse (publisher)</dd></div>
+          <div><dt>Platform</dt><dd>Meta Quest 3 and 3S; seated, standing or roomscale</dd></div>
+          <div><dt>Input</dt><dd>Hand tracking or controllers</dd></div>
+          <div><dt>Status</dt><dd>Early Access on the Meta Quest Store since 10 September 2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- THE PRODUCT -->
+    <section id="product">
+      <div class="reveal">
+        <div class="section-tag">The Product</div>
+        <h3 class="section-heading">What It Is</h3>
+      </div>
+
+      <div class="pw-blocks">
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">VR training, opened up</h4>
+          <div class="pw-prose">
+            <p>AutoVRse builds VR training for industrial workforces. This app opens a set of those modules to anyone with a Meta Quest, so teams can try them on their own headsets.</p>
+            <p>Each module is <strong>a real procedure rebuilt in VR</strong>, not a summary or a walkthrough video. The equipment behaves the way it does on the floor, the steps follow an actual work instruction, and you learn by doing. The modules run on the same engine as AutoVRse's enterprise deployments.</p>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">Built for first-timers</h4>
+          <div class="pw-prose">
+            <ul>
+              <li>Hand tracking or controllers, whichever the learner prefers.</li>
+              <li>Voice guidance and visual prompts at every step.</li>
+              <li><strong>Getting it wrong is safe:</strong> the module corrects you and carries on.</li>
+              <li>Most sessions run 5 to 15 minutes.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">Training you can measure</h4>
+          <div class="pw-prose">
+            <p>Every full module comes with the <strong>Pulse Dashboard</strong>. Instead of a simple pass or fail, step-level tracking shows exactly where a learner hesitated or struggled.</p>
+            <p>Pulse IDs run independently of the headset's Meta account, so even shared headsets give clean, per-person data, with manager and learner views and LMS integration.</p>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">Who it's for</h4>
+          <div class="pw-prose">
+            <ul>
+              <li>Teams that already have Meta Quest headsets and need content for them.</li>
+              <li>Safety leads who need standardised, repeatable training now, without waiting months for a custom build.</li>
+              <li>VR studios and systems integrators adding credible industrial content for their clients.</li>
+              <li>Buyers who want proof before committing to a custom deployment.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">How it's offered</h4>
+          <div class="pw-prose">
+            <p>The app is free to download. The short modules, including PPE Fundamentals and LOTO Basics: Mechanical Safety, are free to run. Full modules unlock per headset, with the complete procedure, an assessment and Pulse tracking.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MODULES -->
+    <section id="modules">
+      <div class="reveal">
+        <div class="section-tag">The Modules</div>
+        <h3 class="section-heading">Twelve Procedures</h3>
+      </div>
+      <div class="pw-caps reveal">
+        <div class="skill-group">
+          <div class="skill-group-title">LOTO: Mechanical <span class="case-free">Free</span></div>
+          <p>Lock out and tag out mechanical equipment safely before maintenance.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">PPE Fundamentals <span class="case-free">Free</span></div>
+          <p>Select, inspect, fit and use the right protective equipment for the job.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">LOTO: Electrical</div>
+          <p>De-energise and lock out electrical systems, from isolation to verification.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Electrical Safety</div>
+          <p>Handle live electrical systems and equipment safely, with correct isolation.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Gas Cutting</div>
+          <p>Set up and operate oxy-fuel cutting equipment, without real heat or fire risk.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Welding Safety</div>
+          <p>Spot hazards and follow safe practice during arc welding.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Conveyor Belt</div>
+          <p>Diagnose and replace a flat belt on a sorting line, minding pinch points.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Working at Height</div>
+          <p>Use harnesses and fall protection correctly for elevated work.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Confined Spaces</div>
+          <p>Run entry checks and controls, and respond to emergencies.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Fire Safety</div>
+          <p>Recognise fire hazards, use an extinguisher and evacuate correctly.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Forklift Safety</div>
+          <p>Operate a forklift and handle loads safely around people on the floor.</p>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Defensive Driving</div>
+          <p>Build hazard perception for on-road and industrial site vehicles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY ROLE -->
+    <section id="role">
+      <div class="reveal">
+        <div class="section-tag">My Role</div>
+        <h3 class="section-heading">Pitch to Launch, and After</h3>
+      </div>
+      <div class="pw-hands reveal">
+        <div class="pw-prose pw-lead">
+          <p>I conceived Standard Industry Modules as AutoVRse's first standalone product and <strong>owned it end to end</strong> as Technical Product Manager, from the pitch through creative direction and technical leadership to the public launch on the Meta Quest Store.</p>
+        </div>
+        <div class="pw-steps">
+          <div class="pw-step">
+            <span class="pw-step-num">Learning design</span>
+            <p>Restructured the storyboards for all 12 modules, reworking how safety concepts are sequenced and taught in VR.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Art direction</span>
+            <p>Drove the art direction and the overall look and feel of the in-headset experience, end to end.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Team lead</span>
+            <p>Led a cross-functional team of developers and 3D artists through the full content overhaul, from storyboard to final build.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Growth</span>
+            <p>Built the post-launch growth plan: mapped the store discovery funnel (reach → clicks → conversions) and set priorities across marketing, listing optimisation and pricing.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Pricing</span>
+            <p>Ran competitive research across VR training apps on the Quest Store, and proposed a one-time retail purchase model alongside a separate enterprise tier.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="reveal">
+        <div class="section-tag">Gallery</div>
+        <h3 class="section-heading">In the Headset</h3>
+      </div>
+      <!--
+        IMAGES: put screenshots in standard-industry-modules/images/ and swap each placeholder
+        <div class="pw-shot-ph">…</div> for an <img>, keeping the figcaption. Example:
+        <img src="images/01-loto.jpg" alt="Locking out a machine isolator in VR" loading="lazy"/>
+        16:9 works best.
+      -->
+      <div class="pw-gallery reveal">
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>01</span></div>
+          <figcaption>Lockout/tagout on a machine before maintenance</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>02</span></div>
+          <figcaption>Setting up oxy-fuel gas cutting equipment</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>03</span></div>
+          <figcaption>Harness and fall protection for work at height</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>04</span></div>
+          <figcaption>Forklift operation on the shop floor</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>05</span></div>
+          <figcaption>Responding to a fire with the right extinguisher</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <div class="pw-shot-ph" aria-hidden="true"><span>06</span></div>
+          <figcaption>Step-level results in the Pulse Dashboard</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TRY IT -->
+    <section id="try">
+      <div class="pw-why reveal">
+        <div class="section-tag">Try It</div>
+        <div class="pw-prose">
+          <p class="case-cta-lead">Two modules are free to run on any Meta Quest 3 or 3S.</p>
+          <p>Download the app from the Meta Quest Store and try PPE Fundamentals and LOTO Basics: Mechanical Safety on your own headset.</p>
+        </div>
+        <div class="pw-why-cta">
+          <a href="https://www.meta.com/en-gb/experiences/autovrse-standard-industry-modules/1046743811173548/" class="btn-primary" target="_blank" rel="noopener">View on Meta Quest Store &#8599;</a>
+          <a href="../#projects" class="btn-outline">&larr; More Projects</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 charmseer &nbsp;·&nbsp; Standard Industry Modules, published by AutoVRse &nbsp;·&nbsp; <a href="../" class="pw-footer-link">Back to portfolio</a></span>
+  </footer>
+
+  <script src="../script.js?v=2026-11-26c"></script>
+</body>
+</html>
