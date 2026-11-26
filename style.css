@@ -1151,6 +1151,7 @@ h4.pw-block-title {
 .pw-shot-ph {
   display: block;
   width: 100%;
+  height: auto; /* let aspect-ratio win over the img's width/height attributes */
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border: 1px solid var(--border2);
@@ -1411,6 +1412,8 @@ h4.pw-block-title {
    Reuse the Petalworks page layout in the site's own palette.
    ============================================================ */
 .page-case { --pw-clay: var(--accent2); }
+/* Six role cards read better as two rows of three than five plus one */
+.pw-steps-wide { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 /* Product names here are longer than "Sreeram", so the hero title is a size down */
 .page-case h1.hero-name { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; }
 
@@ -1454,6 +1457,57 @@ h4.pw-block-title {
   color: var(--text) !important;
 }
 #try .section-tag { margin-bottom: 1.2rem; }
+
+/* External links in the nav stand out from the in-page anchors */
+.nav-links a.nav-external,
+.mobile-link.nav-external { color: var(--accent); }
+
+/* A full-width banner that sends visitors to a project's own website */
+.case-cta-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 2rem 2.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.case-cta-band:hover { border-color: var(--accent); transform: translateY(-3px); }
+.case-cta-band:hover .case-cta-band-btn { opacity: 0.85; }
+.case-cta-band-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 560px;
+}
+.case-cta-band-kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.case-cta-band-title {
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+}
+.case-cta-band-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  line-height: 1.8;
+  color: var(--text2);
+}
+@media (max-width: 768px) {
+  .case-cta-band { padding: 1.6rem 1.4rem; }
+}
 
 @media (max-width: 900px) {
   .pw-glance { grid-template-columns: 1fr; gap: 2.5rem; }

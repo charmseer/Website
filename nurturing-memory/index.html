@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nurturing Memory — Sreeram Hrithwik</title>
+  <meta name="description" content="Nurturing Memory is the story of a South Indian family’s experience with caregiving, told through gardening. Sreeram Hrithwik is the game's Lead Unity Developer."/>
+
+  <!-- Link previews (LinkedIn, chat apps) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Nurturing Memory — Lead Unity Developer"/>
+  <meta property="og:description" content="Nurturing Memory is the story of a South Indian family’s experience with caregiving, told through gardening."/>
+  <meta property="og:url" content="https://charmseer.com/nurturing-memory/"/>
+  <meta property="og:image" content="https://charmseer.com/nurturing-memory/images/cover.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="A grandmother in a blue sari sits on a bench beside a lily pond in a lush garden"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css?v=2026-11-27b"/>
+</head>
+<body class="page-case">
+
+  <div class="cursor" id="cursor"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="../" class="nav-logo">CHARMSEER</a>
+    <ul class="nav-links">
+      <li><a href="#teaser">Teaser</a></li>
+      <li><a href="#game">The Game</a></li>
+      <li><a href="#role">My Role</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="https://nurturingmemory.cargo.site/" class="nav-external" target="_blank" rel="noopener">Game Site &#8599;</a></li>
+      <li><a href="../#projects">&larr; Portfolio</a></li>
+      <li>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="mode-label">Dark</span>
+          <div class="toggle" id="theme-toggle" role="button" aria-label="Toggle light/dark theme">
+            <div class="toggle-thumb"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-mobile-btn" id="nav-mobile-btn" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#teaser" class="mobile-link">Teaser</a>
+    <a href="#game" class="mobile-link">The Game</a>
+    <a href="#role" class="mobile-link">My Role</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="https://nurturingmemory.cargo.site/" class="mobile-link nav-external" target="_blank" rel="noopener">Game Site &#8599;</a>
+    <a href="../#projects" class="mobile-link">&larr; Portfolio</a>
+    <div class="toggle-wrap" style="justify-content:center;margin-top:1rem;">
+      <span class="toggle-label" id="mode-label-mobile">Dark</span>
+      <div class="toggle" id="theme-toggle-mobile" role="button" aria-label="Toggle light/dark theme">
+        <div class="toggle-thumb"></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="pw-hero">
+      <div class="hero-tag">Project 05 &nbsp;·&nbsp; Narrative Game &nbsp;·&nbsp; In Development</div>
+      <h1 class="hero-name">Nurturing Memory</h1>
+      <!-- Game description: brochure text, word for word -->
+      <h2 class="hero-title">Nurturing Memory is the story of a South Indian family’s experience with caregiving, <span>told through gardening.</span></h2>
+      <p class="hero-desc">
+        I'm the Lead Unity Developer. I took the game from its initial scene setup to a playable prototype, and I'm leading its development through alpha.
+      </p>
+      <div class="pw-hero-tags">
+        <span class="project-tag">PC / Mac</span>
+        <span class="project-tag">Simulation</span>
+        <span class="project-tag">Unity</span>
+        <span class="project-tag">Yarn Spinner</span>
+        <span class="project-tag">Lead Developer</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#teaser" class="btn-primary">Watch the Teaser</a>
+        <a href="https://nurturingmemory.cargo.site/" class="btn-outline" target="_blank" rel="noopener">Game Website &#8599;</a>
+      </div>
+    </section>
+
+    <!-- TEASER -->
+    <section id="teaser">
+      <div class="reveal">
+        <div class="section-tag">Teaser</div>
+        <h3 class="section-heading">Watch the Teaser</h3>
+      </div>
+      <div class="pw-video reveal">
+        <iframe src="https://www.youtube-nocookie.com/embed/IZV7JHKPKgk?rel=0"
+                title="Nurturing Memory teaser"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- AT A GLANCE -->
+    <section id="glance">
+      <div class="reveal">
+        <div class="section-tag">At a Glance</div>
+        <h3 class="section-heading">The Project</h3>
+      </div>
+      <div class="pw-glance reveal">
+        <div class="pw-stats">
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Core team members</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">15–20</span>
+            <span class="stat-label">In-game days planned</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">60+</span>
+            <span class="stat-label">Automated tests</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Alpha</span>
+            <span class="stat-label">Playtested every few months</span>
+          </div>
+        </div>
+        <dl class="pw-facts">
+          <div><dt>Role</dt><dd>Lead Unity Developer</dd></div>
+          <div><dt>Team</dt><dd>Neeti Sivakumar, Game Director · Shreya Pidikiti, Art Director · Mehreen Yousaf, Writer</dd></div>
+          <div><dt>Platform</dt><dd>PC / Mac</dd></div>
+          <div><dt>Genre</dt><dd>Simulation · Target audience 16+</dd></div>
+          <div><dt>Built with</dt><dd>Unity 6, C#, Yarn Spinner</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- THE GAME: brochure text, word for word -->
+    <section id="game">
+      <div class="reveal">
+        <div class="section-tag">The Game</div>
+        <h3 class="section-heading">About Nurturing Memory</h3>
+      </div>
+
+      <div class="pw-blocks">
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">The story</h4>
+          <div class="pw-prose">
+            <p>Visit your grandmother after years of being away. Choose to rebuild your relationship with her, navigate shifting roles of care, and tend to her garden.</p>
+            <p>The act of gardening works as a metaphor for caregiving, and the state of the garden shifts in response to her physical and mental struggles. Balance aspects of caretaking and challenges of the day to day with your mental health.</p>
+          </div>
+        </article>
+
+        <article class="pw-block reveal">
+          <h4 class="pw-block-title">Features</h4>
+          <div class="pw-prose">
+            <ul>
+              <li>Gardening through mini-games, management, and strategy.</li>
+              <li>Dialogue-driven storytelling explores family relationships.</li>
+              <li>Garden morphs to reflect grandmother’s health.</li>
+              <li>Exploration to unlock dialogue and grandmother’s memories.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <a href="https://nurturingmemory.cargo.site/" class="case-cta-band reveal" target="_blank" rel="noopener">
+        <span class="case-cta-band-text">
+          <span class="case-cta-band-kicker">Official website</span>
+          <span class="case-cta-band-title">Follow Nurturing Memory as it grows</span>
+          <span class="case-cta-band-sub">Meet the team, watch the teaser and sign up for the next playtest.</span>
+        </span>
+        <span class="btn-primary case-cta-band-btn">Visit the Game Website &#8599;</span>
+      </a>
+    </section>
+
+    <!-- MY ROLE -->
+    <section id="role">
+      <div class="reveal">
+        <div class="section-tag">My Role</div>
+        <h3 class="section-heading">Lead Unity Developer</h3>
+      </div>
+      <div class="pw-hands reveal">
+        <div class="pw-prose pw-lead">
+          <p>I lead development on a four-person core team. When I joined, the project had only its initial scene setup. I <strong>built the game's playable prototype from there</strong>, and I'm now taking it from that prototype to a full game.</p>
+        </div>
+        <div class="pw-steps pw-steps-wide">
+          <div class="pw-step">
+            <span class="pw-step-num">Prototype to alpha</span>
+            <p>Built the first playable version of the game, and grew it into the alpha build the team playtests every few months.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Technical direction</span>
+            <p>Planned how the game grows from a short prototype into a full game, so the team can keep adding story and content without rebuilding what works.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Gameplay</span>
+            <p>Built the game's core systems, from gardening and the passing of days to weather, an in-game phone, inventory, memories and saving.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Story</span>
+            <p>Brought the writer's dialogue into the game with Yarn Spinner, so the story plays out as the designer intended.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Tools &amp; testing</span>
+            <p>Built editor and playtest tools for the team, backed by automated tests and fixes from each playtest round.</p>
+          </div>
+          <div class="pw-step">
+            <span class="pw-step-num">Team workflow</span>
+            <p>Run version control and builds for the team, including a separate branch for art, and turn the Game Director's feedback into playable builds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="reveal">
+        <div class="section-tag">Gallery</div>
+        <h3 class="section-heading">In the Game</h3>
+      </div>
+      <div class="pw-gallery reveal">
+        <figure class="pw-shot">
+          <img src="images/forest.jpg" alt="A grandmother in a blue sari stands in a misty forest clearing" width="1600" height="975" loading="lazy"/>
+          <figcaption>Under the trees</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <img src="images/garden-path.jpg" alt="A grandmother in a blue sari on a sunlit path through a dense garden" width="1600" height="999" loading="lazy"/>
+          <figcaption>A walk through the garden</figcaption>
+        </figure>
+        <figure class="pw-shot">
+          <img src="images/lily-pond.jpg" alt="A grandmother in a blue sari sits on a bench beside a lily pond" width="1600" height="897" loading="lazy"/>
+          <figcaption>By the pond</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PLAYTEST -->
+    <section id="playtest">
+      <div class="pw-why reveal">
+        <div class="section-tag">Playtest</div>
+        <div class="pw-prose">
+          <p class="case-cta-lead">Nurturing Memory is in alpha, with playtests every few months.</p>
+          <p>Sign up for a playtest session or support the game on its website.</p>
+        </div>
+        <div class="pw-why-cta">
+          <a href="https://nurturingmemory.cargo.site/" class="btn-primary" target="_blank" rel="noopener">Game Website &#8599;</a>
+          <a href="../#projects" class="btn-outline">&larr; More Projects</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 charmseer &nbsp;·&nbsp; Nurturing Memory &nbsp;·&nbsp; <a href="../" class="pw-footer-link">Back to portfolio</a></span>
+  </footer>
+
+  <script src="../script.js?v=2026-11-27b"></script>
+</body>
+</html>
